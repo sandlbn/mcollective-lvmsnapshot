@@ -4,7 +4,7 @@ metadata :name        => "lvm_snapshot",
          :license     => "BSD",
          :version     => "1.0",
          :url         => "https://github.com/sandlbn",
-         :timeout     => 10
+         :timeout     => 100
 
 action "create_snapshot", :description => "Creates snapshot" do
 
@@ -52,12 +52,10 @@ action "create_snapshot", :description => "Creates snapshot" do
 
     output :status,
            :description => "The output of the command",
-           :display_as  => "Command result", 
+           :display_as  => "Command result",
            :default     => "no output"
-
-    summarize do                                                              
+    summarize do
       aggregate summary(:status)
-    end                                                                                                                                                                                                                                                                                          
 end
 
 action "merge_snapshot", :description => "Merge snapshot" do
@@ -82,10 +80,10 @@ action "merge_snapshot", :description => "Merge snapshot" do
 
     output :status,
            :description => "The output of the command",
-           :display_as  => "Command result",                                                                                                                                               :default     => "no output"                                                                                                                                                                                                                                                           
-    summarize do                                                              
+           :display_as  => "Command result",
+           :default     => "no output"
+    summarize do
       aggregate summary(:status)
-    end                                                                                                                                                                                                                                                                                          
 end
 
 action "remove_snapshot", :description => "Remove snapshot" do
@@ -110,10 +108,10 @@ action "remove_snapshot", :description => "Remove snapshot" do
 
     output :status,
            :description => "The output of the command",
-           :display_as  => "Command result",                                                                                                                                               :default     => "no output"                                                                                                                                                                                                                                                           
-    summarize do                                                              
+           :display_as  => "Command result",
+           :default     => "no output"
+    summarize do
       aggregate summary(:status)
-    end                                                                                                                                                                                                                                                                                          
 end
 
 action "umount_snapshot", :description => "Umount snapshot" do
@@ -122,10 +120,10 @@ action "umount_snapshot", :description => "Umount snapshot" do
 
     output :status,
            :description => "The output of the command",
-           :display_as  => "Command result",                                                                                                                                               :default     => "no output"                                                                                                                                                                                                                                                           
-    summarize do                                                              
+           :display_as  => "Command result",
+           :default     => "no output"
+    summarize do
       aggregate summary(:status)
-    end                                                                                                                                                                                                                                                                                          
 end
 
 action "remove_snapshot_from_model", :description => "Remove snapshot from model" do
@@ -134,9 +132,9 @@ action "remove_snapshot_from_model", :description => "Remove snapshot from model
 
     output :status,
            :description => "The output of the command",
-           :display_as  => "Command result",                                                                                                                                               :default     => "no output"                                                                                                                                                                                                                                                           
-    summarize do                                                              
+           :display_as  => "Command result",
+           :default     => "no output"
+    summarize do
       aggregate summary(:status)
-    end                                                                                                                                                                                                                                                                                          
 end
 
